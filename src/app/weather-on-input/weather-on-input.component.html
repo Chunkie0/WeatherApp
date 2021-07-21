@@ -1,0 +1,12 @@
+<div class="weatherOnInput">
+    <h3>{{title}}</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="forms">
+            <label for="text">Enter location:</label>
+            <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Please provide location...">
+        </div>
+        <div class="submit">
+            <input type="submit" value="Show weather" class="inputSubmit">
+        </div>
+    </form>
+</div>
