@@ -1,7 +1,8 @@
 body {
-    background-image: url("https://media.wired.co.uk/photos/606dba1c9a15f73a597a2aa1/master/w_1600%2Cc_limit/weather.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(119, 115, 115);
 }
 
 app-root {
@@ -24,6 +25,7 @@ ul {
 
 ul li {
     margin: 10px;
+    border-bottom: 1px solid rgb(119, 115, 115);
 }
 
 app-weather-on-input {
@@ -37,13 +39,27 @@ app-weather-on-input {
     flex-direction: column;
 }
 
+.forms {
+    margin-bottom: 10px;
+}
+
 .forms input {
     height: 30px;
     font-size: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 .submit input {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     font-size: 20px;
+    border-radius: 10px;
+    color:rgb(119, 115, 115);
+    background:white;
+}
+
+.submit input:hover {
+    color: white;
+    background: rgb(119, 115, 115);
 }
