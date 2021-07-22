@@ -21,13 +21,16 @@ export class WeatherOnInputComponent implements OnInit {
     const latLong = async () => {
       try {
         let [location] = await Promise.all([
-          fetch(`https://geocode.xyz/${this.text}?json=1&auth=510892297886156452857x81074`)
+          fetch(`https://geocode.xyz/${this.text}?json=1&auth=304754158337206435710x11135`)
         ])
         const infoLocation = await location.json();
         const latt = infoLocation.latt
         const longt = infoLocation.longt
+        const city = infoLocation.standard.city
+        const country = infoLocation.standard.countryname
+        const prov = infoLocation.standard.prov
 
-        this.inputService.changeElement([latt, longt])
+        this.inputService.changeElement([latt, longt, city, country, prov])
       } catch (err) {
         console.log(err);
       };

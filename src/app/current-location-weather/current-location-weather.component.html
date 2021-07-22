@@ -1,5 +1,9 @@
-<ul>
+<div class="loader" *ngIf="isLoading"></div>
+<div *ngIf="!isLoading">
+  <ul>
+    <li>Current location: {{currentWeather.currentLocation}}, {{currentWeather.country}}, {{currentWeather.prov}}</li>
     <li>Temperature: {{currentWeather.temperature}}c</li>
     <li>Wind: {{currentWeather.wind}}ms</li>
     <li>Wind Direction: {{currentWeather.windDirection}} {{currentWeather.windLocation }}</li>
-</ul>
+  </ul>
+</div>
