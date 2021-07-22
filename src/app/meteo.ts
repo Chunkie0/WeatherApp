@@ -70,6 +70,8 @@ export interface Meteo {
 
 export interface currentLocationWeather {
     currentLocation: string;
+    country: string;
+    prov: string;
     longitude: number;
     temperature: number;
     latitude: number;
